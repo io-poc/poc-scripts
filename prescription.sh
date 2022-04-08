@@ -74,7 +74,7 @@ function generateYML () {
         --scm.owner=*) scm_owner="${i#*=}" ;;
         --scm.repo.name=*) scm_repo_name="${i#*=}" ;;
         --scm.branch.name=*) scm_branch_name="${i#*=}" ;;
-        --scm.codePatch=*) scm_codepatch="${i#*=}" ;;
+        --codePatch=*) codepatch="${i#*=}" ;;
         --bitbucket.workspace=*) bitbucket_workspace="${i#*=}" ;;    #bitbucket
         --bitbucket.commit.id=*) bitbucket_commit_id="${i#*=}" ;;
         --bitbucket.username=*) bitbucket_username="${i#*=}" ;;
@@ -252,7 +252,7 @@ function generateYML () {
         s~\"<<ENABLE_JIRA>>\"~$enable_jira~g; \
         s~<<SCM_TYPE>>~$scm_type~g; \
         s~<<SCM_OWNER>>~$scm_owner~g; \
-        s~<<SCM_CODEPATCH>>~$scm_codepatch~g; \
+        s~<<CODEPATCH>>~$codepatch~g; \
         s~<<SCM_REPO_NAME>>~$scm_repo_name~g; \
         s~<<SCM_BRANCH_NAME>>~$scm_branch_name~g")
         # apply the json with the substituted value
@@ -314,7 +314,7 @@ function generateYML () {
         s~<<ENABLE_JIRA>>~$enable_jira~g; \
         s~<<SCM_TYPE>>~$scm_type~g; \
         s~<<SCM_OWNER>>~$scm_owner~g; \
-        s~<<SCM_CODEPATCH>>~$scm_codepatch~g; \
+        s~<<CODEPATCH>>~$codepatch~g; \
         s~<<SCM_REPO_NAME>>~$scm_repo_name~g; \
         s~<<SCM_BRANCH_NAME>>~$scm_branch_name~g")
         # apply the yml with the substituted value
