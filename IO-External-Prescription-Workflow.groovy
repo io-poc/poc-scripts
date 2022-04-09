@@ -46,7 +46,7 @@ pipeline {
                 echo "Getting IO Prescription"
                 sh '''
                 rm -fr prescription.sh
-                wget "https://raw.githubusercontent.com/io-poc/poc-scripts/main/prescription.sh"
+                wget "https://raw.githubusercontent.com/io-poc/poc-scripts/2021.12.4/prescription.sh"
                 sed -i -e 's/\r$//' prescription.sh
                 chmod a+x prescription.sh
                 ./prescription.sh \
@@ -177,4 +177,10 @@ pipeline {
             }
         }
     }
+
+    // post {
+    //     always {
+    //         cleanWs()
+    //     }
+    // }
 }
