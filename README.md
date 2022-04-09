@@ -8,7 +8,7 @@
 | IO-Prescription-Polaris-Workflow | Jenkinsfile that runs the Polaris satge in addition to the above |
 | IO-Prescription-Polaris-BlackDuck-Workflow | Jenkinsfile that runs Black Duck in addition to the above |
 | IO-External-Prescription-Workflow | Jenkinsfile that uses SCM type as 'External' to get the IO prescription |
-| prescription.sh | Prescription shell-script for 2021.12.4 (uses `codePatch` to support SCM type of 'external') |
+| prescription.sh | Prescription shell-script for 2021.12.4 (adds `codePatch` in the API call to IO IQ to support SCM type of 'external') |
 | io-manifest.json | Sample IO Manifest JSON (includes `codePatch` parameter to support SCM type of 'external') |
 
 ### Usage (SCM Type: Supported SCM)
