@@ -201,7 +201,7 @@ pipeline {
             steps {
                 script {
                     if (buildBreakerStatus) {
-                        input message: 'One or more conditions triggered Build Breaker. Do you wish to proceed?'
+                        echo "One or more conditions triggered Build Breaker."
                     }
                 }
                 echo "Security Sign-Off Check Complete (Approved or Not Applicable)"
