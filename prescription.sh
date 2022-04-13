@@ -450,7 +450,8 @@ function is_synopsys_config_present () {
         printf "${config_file} file does not exist\n"
         printf "Downloading default ${config_file}\n"
         if [ -z "$io_manifest_url" ]; then
-            wget "https://raw.githubusercontent.com/synopsys-sig/io-artifacts/${workflow_version}/${config_file}"
+            wget "https://raw.githubusercontent.com/io-poc/poc-scripts/2021.12.4/io-manifest.json"
+            # wget "https://raw.githubusercontent.com/synopsys-sig/io-artifacts/${workflow_version}/${config_file}"
         else
             wget "$io_manifest_url" -O $config_file
         fi
