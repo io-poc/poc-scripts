@@ -142,7 +142,7 @@
    "tool_information": [
       {
          "tool_name": "coverity",
-         "enabled": false,
+         "enabled": "<<IS_SAST_ENABLED>>",
          "fields": {
             "file_path": "coverity-results.json",
             "stream": "<<COVERITY_STREAM>>",
@@ -153,7 +153,7 @@
       },
       {
          "tool_name": "polaris",
-         "enabled": "<<IS_SAST_ENABLED>>",
+         "enabled": "false",
          "fields": {
             "project_name": "<<POLARIS_PROJECT_NAME>>",
             "instance_url": "<<POLARIS_SERVER_URL>>",
